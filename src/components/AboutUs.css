@@ -1,0 +1,39 @@
+.sectioner {
+  position: relative;
+  padding: 40px;
+  margin: 20px;
+  background-image: url('../../public/pictures/AboutUs.jpg'); /* Replace with your actual image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  color: white; /* Ensures text color is white to contrast with the dark background */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  overflow: hidden;
+}
+
+.sectioner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
+  z-index: 1; /* Ensures the overlay is on top of the background image */
+}
+
+.sectioner h2,
+.sectioner p {
+  position: relative;
+  z-index: 2; /* Ensures text appears above the overlay */
+}
+
+.sectioner h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.sectioner p {
+  font-size: 16px;
+  line-height: 1.6;
+}

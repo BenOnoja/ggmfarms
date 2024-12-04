@@ -1,0 +1,121 @@
+/* App-wide CSS */
+
+/* Ensure smooth scrolling for all internal links */
+html {
+  scroll-behavior: smooth;
+  height: 100%; /* Ensure the html element takes up the full height */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Adjust background position for smaller screens */
+@media (max-width: 768px) {
+  body {
+    background-position: top;
+  }
+}
+
+/* Ensure content area takes up remaining space, pushing the footer down */
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Content grows to fill available space */
+}
+
+/* The main content section should take up as much space as possible */
+.main-content {
+  flex-grow: 1;
+}
+
+/* Navbar Styles with Gradient Background */
+.navbar {
+  background: radial-gradient(circle, #4b0000, #800000, #4b0000) !important; /* Darkest maroon to maroon and back */
+  margin-bottom: 20px;
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+
+.navbar-toggler-icon {
+  background-color: white !important;
+}
+
+.navbar-toggler {
+  border-color: white !important;
+}
+
+/* Section padding and border styling */
+.section {
+  padding: 50px;
+  background-color: #f8f8f8;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+
+}
+
+
+
+
+
+#whats-new {
+  background-color: #ffcccc; /* Lighter maroonish pink */
+}
+
+h2 {
+  color: #4b0000;
+}
+
+/* Footer Styles with Gradient Background */
+.footer {
+  background: radial-gradient(circle, #4b0000, #800000, #4b0000); /* Darkest maroon to maroon and back */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  flex-shrink: 0; /* Ensure the footer doesn't shrink */
+}
+
+/* Footer Links */
+.footer a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Us Section */
+#contact-us h2,
+#contact-us p {
+  color: #4b0000;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 767px) {
+  .section {
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar {
+    font-size: 1rem;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
